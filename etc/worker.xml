@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<worker>
+    <entry groupid="1" send_size="200" recv_size="600" expire_time="1000" />
+    <log level="5" path="../log/worker_" file_size="1024" file_num="3" />
+    <module bin="./example.so" etc="../etc/test.xml" />
+    <shm shmbase="1024" sembase="4096"/>
+</worker>

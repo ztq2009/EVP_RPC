@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<proxy>
+    <acceptor timeout="60" udpclose="true" maxconn="100">
+        <entry type="tcp" if="*" port="5575" />
+        <entry type="udp" if="*" port="5576" />
+    </acceptor>
+    <connector>
+        <entry groupid="1" send_size="600" recv_size="200" expire_time="1000" />
+    </connector>
+	<iptable whitelist="" blacklist="" />
+    <log level="5" path="../log/proxy_" file_size="1024" file_num="3" />
+    <module bin="./example.so" etc="" />
+	<shm shmbase="1024" sembase="4096"/>
+</proxy>
